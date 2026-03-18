@@ -5,13 +5,15 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { CreatePostDialog } from "@/components/CreatePostDialog";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { useNavigate } from "react-router-dom";
+import { currentUser } from "@/lib/userData";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const [createOpen, setCreateOpen] = useState(false);
 
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-background">
+      <div className="min-h-screen flex w-full bg-background transition-colors duration-300">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0">
           <header className="h-14 flex items-center justify-between border-b border-border/50 px-4 glass sticky top-0 z-30">
@@ -32,6 +34,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 <Plus className="h-3.5 w-3.5" />
                 <span className="hidden sm:inline">Create</span>
               </Button>
+              <ProfileButton />
             </div>
           </header>
           <main className="flex-1 overflow-auto p-4 md:p-6 lg:p-8">
@@ -46,5 +49,17 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       </div>
       <CreatePostDialog open={createOpen} onOpenChange={setCreateOpen} />
     </SidebarProvider>
+  );
+}
+
+function ProfileButton() {
+  const navigate = useNavigate();
+  return (
+    <button
+      onClick={() => navigate("/profile")}
+      className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary/30 transition-colors"
+    >
+      {currentUser.avatar}
+    </button>
   );
 }
