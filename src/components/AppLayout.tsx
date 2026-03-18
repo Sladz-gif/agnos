@@ -4,6 +4,7 @@ import { Bell, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { CreatePostDialog } from "@/components/CreatePostDialog";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const [createOpen, setCreateOpen] = useState(false);
