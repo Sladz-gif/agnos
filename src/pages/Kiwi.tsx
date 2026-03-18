@@ -72,7 +72,7 @@ export default function Kiwi() {
                 : "bg-card glass-border"
             }`}>
               {msg.role === "assistant" ? (
-                <div className="prose prose-sm prose-invert max-w-none [&>p]:text-foreground/90 [&>p]:mb-2 [&_strong]:text-foreground">
+                <div className="prose prose-sm max-w-none [&>p]:text-foreground/90 [&>p]:mb-2 [&_strong]:text-foreground [&_li]:text-foreground/90">
                   <ReactMarkdown>{msg.content}</ReactMarkdown>
                 </div>
               ) : msg.content}
