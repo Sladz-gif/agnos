@@ -4,6 +4,7 @@ import { Bell, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { CreatePostDialog } from "@/components/CreatePostDialog";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const [createOpen, setCreateOpen] = useState(false);
@@ -18,6 +19,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <SidebarTrigger className="text-muted-foreground hover:text-foreground" />
             </div>
             <div className="flex items-center gap-2">
+              <ThemeSwitcher />
               <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground relative">
                 <Bell className="h-4 w-4" />
                 <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-primary" />
