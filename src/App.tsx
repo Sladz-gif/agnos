@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppLayout } from "@/components/AppLayout";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import Dashboard from "./pages/Dashboard";
 import Feed from "./pages/Feed";
 import Channels from "./pages/Channels";
