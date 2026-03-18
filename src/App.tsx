@@ -11,6 +11,8 @@ import Channels from "./pages/Channels";
 import Marketplace from "./pages/Marketplace";
 import Farm from "./pages/Farm";
 import Kiwi from "./pages/Kiwi";
+import Profile from "./pages/Profile";
+import Messages from "./pages/Messages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/farm" element={<Farm />} />
               <Route path="/kiwi" element={<Kiwi />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/messages" element={<Messages />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AppLayout>
