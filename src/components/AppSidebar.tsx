@@ -1,5 +1,5 @@
 import {
-  LayoutDashboard, Rss, Users, ShoppingBag, Sprout, Bot, MessageSquare, User,
+  LayoutDashboard, Rss, Users, ShoppingBag, Sprout, Bot, MessageSquare, User, Newspaper, GraduationCap,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
@@ -13,6 +13,8 @@ const mainNav = [
   { title: "Feed", url: "/feed", icon: Rss },
   { title: "Channels", url: "/channels", icon: Users },
   { title: "Marketplace", url: "/marketplace", icon: ShoppingBag },
+  { title: "News", url: "/news", icon: Newspaper },
+  { title: "Lessons", url: "/lessons", icon: GraduationCap },
   { title: "Farm", url: "/farm", icon: Sprout },
 ];
 

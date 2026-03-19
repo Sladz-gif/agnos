@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, ReactNode } from "react
 
 export type ThemeName = "midnight" | "aurora" | "ember" | "ocean" | "frost";
 
-interface ThemeInfo {
+export interface ThemeInfo {
   name: ThemeName;
   label: string;
   description: string;
@@ -30,11 +30,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     localStorage.setItem("agnos-theme", theme);
     const root = document.documentElement;
-    // Remove all theme classes
-    themes.forEach(t => root.classList.remove(`theme-${t.name}`));
-    // Add current (midnight is default/:root, so no class needed)
-    if (theme !== "midnight") {
-      root.classList.add(`theme-${theme}`);
+    
+    // Set data-theme attribute for CSS variable targeting
+    root.setAttribute("data-theme", theme);
+
+    // Manage dark mode class (frost is light, others are dark)
+    if (theme === "frost") {
+      root.classList.remove("dark");
+    } else {
+      root.classList.add("dark");
     }
   }, [theme]);
 

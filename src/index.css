@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root, html[data-theme='midnight'] {
     --background: 222 47% 7%;
     --foreground: 210 40% 98%;
 
@@ -59,7 +59,7 @@
   }
 
   /* Aurora — Violet & Emerald */
-  .theme-aurora {
+  html[data-theme='aurora'] {
     --background: 270 47% 7%;
     --foreground: 210 40% 98%;
     --card: 268 33% 10%;
@@ -98,7 +98,7 @@
   }
 
   /* Ember — Dark with warm amber/orange */
-  .theme-ember {
+  html[data-theme='ember'] {
     --background: 20 47% 6%;
     --foreground: 40 40% 96%;
     --card: 20 30% 9%;
@@ -137,7 +137,7 @@
   }
 
   /* Ocean — Deep teal & sapphire */
-  .theme-ocean {
+  html[data-theme='ocean'] {
     --background: 200 50% 6%;
     --foreground: 195 40% 97%;
     --card: 200 35% 9%;
@@ -176,7 +176,7 @@
   }
 
   /* Frost — Clean light theme */
-  .theme-frost {
+  html[data-theme='frost'] {
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
@@ -214,21 +214,6 @@
     --info-foreground: 217 60% 15%;
   }
 
-  .theme-frost .glass {
-    backdrop-filter: blur(12px) saturate(180%);
-    background: hsl(0 0% 100% / 0.7);
-  }
-
-  .theme-frost .glass-border {
-    border: 1px solid hsl(0 0% 0% / 0.06);
-  }
-
-  .theme-frost .shadow-layered {
-    box-shadow: 0 0 0 1px hsl(0 0% 0% / 0.05), 0 8px 16px -4px hsl(0 0% 0% / 0.08);
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
@@ -257,11 +242,11 @@
   }
 
   .glass-border {
-    border: 1px solid hsl(0 0% 100% / 0.05);
+    border: 1px solid hsl(var(--foreground) / 0.05);
   }
 
   .shadow-layered {
-    box-shadow: 0 0 0 1px hsl(0 0% 100% / 0.05), 0 8px 16px -4px hsl(0 0% 0% / 0.4);
+    box-shadow: 0 0 0 1px hsl(var(--foreground) / 0.05), 0 8px 16px -4px hsl(0 0% 0% / 0.4);
   }
 
   .glow-pulse {
@@ -281,6 +266,23 @@
 
   .sparkline-gradient {
     fill: url(#sparkline-fill);
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
   }
 }
 

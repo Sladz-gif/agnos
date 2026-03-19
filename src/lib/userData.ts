@@ -14,6 +14,7 @@ export interface Post {
 export const currentUser = {
   id: "me",
   username: "kwame_farms",
+  fullName: "Kwame Agyeman",
   avatar: "KF",
   bio: "Agri-tech enthusiast running 3 farms across the Ashanti region. Passionate about sustainable farming and data-driven agriculture.",
   location: "Kumasi, Ghana",
@@ -28,11 +29,11 @@ export const currentUser = {
 };
 
 export const users = [
-  { id: "u1", username: "agri_maven", avatar: "AM", bio: "Organic farming advocate", location: "Techiman", online: true },
-  { id: "u2", username: "poultry_pro", avatar: "PP", bio: "Layer specialist with 2000+ birds", location: "Accra", online: true },
-  { id: "u3", username: "green_fields", avatar: "GF", bio: "Greenhouse tech & irrigation", location: "Kumasi", online: false },
-  { id: "u4", username: "cattle_king", avatar: "CK", bio: "Dairy farmer & cattle breeder", location: "Tamale", online: false },
-  { id: "u5", username: "livestock_hub", avatar: "LH", bio: "Goat & sheep farming", location: "Bolgatanga", online: true },
+  { id: "u1", username: "agri_maven", fullName: "Kofi Mensah", avatar: "KM", bio: "Organic farming advocate & soil scientist specializing in sustainable agriculture.", location: "Techiman", online: true },
+  { id: "u2", username: "poultry_pro", fullName: "Amma Serwaa", avatar: "AS", bio: "Layer specialist with 2000+ birds. Expert in poultry nutrition and health.", location: "Accra", online: true },
+  { id: "u3", username: "green_fields", fullName: "Yaw Boakye", avatar: "YB", bio: "Greenhouse tech & irrigation systems specialist. Helping farmers maximize yield.", location: "Kumasi", online: false },
+  { id: "u4", username: "cattle_king", fullName: "Baba Ibrahim", avatar: "BI", bio: "Dairy farmer & cattle breeder with over 15 years of experience in the industry.", location: "Tamale", online: false },
+  { id: "u5", username: "livestock_hub", fullName: "Efua Darko", avatar: "ED", bio: "Goat & sheep farming specialist. Focused on breeding and quality meat production.", location: "Bolgatanga", online: true },
 ];
 
 export interface Conversation {
