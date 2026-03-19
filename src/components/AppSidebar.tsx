@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sidebar";
 
 const mainNav = [
-  { title: "Dashboard", url: "/", icon: LayoutDashboard },
+  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "Feed", url: "/feed", icon: Rss },
   { title: "Channels", url: "/channels", icon: Users },
   { title: "Marketplace", url: "/marketplace", icon: ShoppingBag },
@@ -30,13 +30,12 @@ export function AppSidebar() {
   const location = useLocation();
 
   const renderItem = (item: { title: string; url: string; icon: any }) => {
-    const active = item.url === "/" ? location.pathname === "/" : location.pathname.startsWith(item.url);
+    const active = location.pathname.startsWith(item.url);
     return (
       <SidebarMenuItem key={item.title}>
         <SidebarMenuButton asChild>
           <NavLink
             to={item.url}
-            end={item.url === "/"}
             className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
               active
                 ? "bg-primary/10 text-primary border-l-2 border-primary"

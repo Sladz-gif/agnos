@@ -19,6 +19,7 @@ import News from "./pages/News";
 import Lessons from "./pages/Lessons";
 import SellerVerification from "./pages/SellerVerification";
 import Checkout from "./pages/Checkout";
+import Landing from "./pages/Landing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,7 +33,8 @@ const App = () => (
         <BrowserRouter>
           <AppLayout>
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Landing />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/feed" element={<Feed />} />
               <Route path="/channels" element={<Channels />} />
               <Route path="/marketplace" element={<Marketplace />} />

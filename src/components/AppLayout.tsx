@@ -42,7 +42,12 @@ function LayoutContent({
       // Restore sidebar only once when leaving the Messages page
       setOpen(true);
     }
-  }, [isMessagesPage, isMobile]); // Only re-run when the page type changes
+  }, [isMessagesPage, isMobile, setOpen]); // Added setOpen to dependencies
+
+  // Don't render the layout on the landing page
+  if (location.pathname === "/") {
+    return <>{children}</>;
+  }
 
   return (
     <div className="min-h-screen flex w-full bg-background transition-colors duration-300">
@@ -62,7 +67,7 @@ function LayoutContent({
         </main>
         <footer className="border-t border-border/30 py-3 px-6 text-center">
           <p className="text-xs text-muted-foreground">
-            Powered by <span className="font-medium text-foreground/70">GKCL</span> – Gifts Kyortaare Company Limited
+            © 2026 <span className="font-medium text-foreground/70">GKCL</span> – Gifts Kyortaare Company Limited
           </p>
         </footer>
       </div>

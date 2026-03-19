@@ -466,7 +466,7 @@ export default function Feed() {
             <a href="#" className="hover:underline">Cookie Policy</a>
             <a href="#" className="hover:underline">Accessibility</a>
             <a href="#" className="hover:underline">Ads info</a>
-            <span>© 2026 Agnos Inc.</span>
+            <span>© 2026 GKCL</span>
           </div>
         </div>
       </div>
