@@ -168,7 +168,7 @@ export default function Landing() {
               <img 
                 src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=2000" 
                 alt="Agnos Interface" 
-                className="rounded-[1.5rem] sm:rounded-[2.5rem] w-full shadow-2xl border border-border/50 grayscale hover:grayscale-0 transition-all duration-700"
+                className="rounded-[1.5rem] sm:rounded-[2.5rem] w-full shadow-2xl border border-border/50 transition-all duration-700"
               />
             </div>
           </motion.div>
@@ -176,10 +176,10 @@ export default function Landing() {
       </section>
 
       {/* Mission Section */}
-      <section id="mission" className="py-20 sm:py-32 bg-surface text-foreground relative overflow-hidden border-y border-border/50">
+      <section id="mission" className="py-20 sm:py-32 bg-[#0f0f12] text-white relative overflow-hidden border-y border-white/5">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 grayscale" />
-          <div className="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface" />
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f12] via-transparent to-[#0f0f12]" />
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -187,18 +187,18 @@ export default function Landing() {
               <div className="flex justify-center lg:justify-start">
                 <Badge className="bg-primary text-primary-foreground border-none rounded-full px-6 py-1.5 text-xs font-black uppercase tracking-[0.2em]">Our Mission</Badge>
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.95] break-words text-foreground">A Digital <span className="text-primary not-italic">Foundation</span> for the Next Billion Farmers.</h2>
-              <p className="text-lg sm:text-xl md:text-2xl font-medium text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase italic tracking-tighter leading-[0.95] break-words text-white">A Digital <span className="text-primary not-italic">Foundation</span> for the Next Billion Farmers.</h2>
+              <p className="text-lg sm:text-xl md:text-2xl font-medium text-white/70 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 We believe that technology should be as accessible as the soil. Our mission is to bridge the gap between traditional farming and high-tech efficiency, providing every agronomist with the tools to feed the world sustainably.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 pt-6">
-                <div className="space-y-2 text-center sm:text-left p-6 rounded-2xl bg-background border border-border shadow-sm">
+                <div className="space-y-2 text-center sm:text-left p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                   <h4 className="text-3xl font-black italic tracking-tighter text-primary">01.</h4>
-                  <p className="text-sm font-bold uppercase tracking-widest text-foreground/80">Transparency in Global Trade</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-white/80">Transparency in Global Trade</p>
                 </div>
-                <div className="space-y-2 text-center sm:text-left p-6 rounded-2xl bg-background border border-border shadow-sm">
+                <div className="space-y-2 text-center sm:text-left p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                   <h4 className="text-3xl font-black italic tracking-tighter text-primary">02.</h4>
-                  <p className="text-sm font-bold uppercase tracking-widest text-foreground/80">Neural-Driven Sustainability</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-white/80">Neural-Driven Sustainability</p>
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function Landing() {
               <img 
                 src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&q=80&w=1200" 
                 alt="Modern Farming" 
-                className="rounded-[2rem] sm:rounded-[4rem] relative z-10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 -rotate-3 group-hover:-rotate-6 w-full object-cover aspect-[4/3] lg:aspect-square border-2 border-border"
+                className="rounded-[2rem] sm:rounded-[4rem] relative z-10 shadow-2xl transition-all duration-700 -rotate-3 group-hover:-rotate-6 w-full object-cover aspect-[4/3] lg:aspect-square border-2 border-border"
               />
             </div>
           </div>
@@ -334,12 +334,12 @@ export default function Landing() {
 
       {/* CTA Section */}
       <section className="py-20 sm:py-32 px-4">
-        <div className="max-w-5xl mx-auto bg-foreground rounded-[2.5rem] sm:rounded-[4rem] p-10 sm:p-16 md:p-24 text-center space-y-8 sm:space-y-10 relative overflow-hidden group border border-border shadow-2xl">
+        <div className="max-w-5xl mx-auto bg-[#0f0f12] rounded-[2.5rem] sm:rounded-[4rem] p-10 sm:p-16 md:p-24 text-center space-y-8 sm:space-y-10 relative overflow-hidden group border border-white/10 shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full -mr-32 -mt-32 blur-3xl group-hover:scale-150 transition-transform duration-1000" />
           <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-[6.5rem] font-black uppercase italic tracking-tighter leading-[0.9] relative z-10 break-words text-white">
             Join the <span className="text-primary not-italic">Revolution</span> in Modern Agriculture.
           </h2>
-          <p className="text-base sm:text-xl md:text-2xl font-medium text-white/80 max-w-2xl mx-auto relative z-10">
+          <p className="text-base sm:text-xl md:text-2xl font-medium text-white/70 max-w-2xl mx-auto relative z-10">
             Agnos is free to start. No complex onboarding, just powerful tools at your fingertips.
           </p>
           <div className="pt-4 sm:pt-6 relative z-10">

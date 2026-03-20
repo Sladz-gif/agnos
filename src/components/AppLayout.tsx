@@ -2,7 +2,7 @@ import { SidebarProvider, SidebarTrigger, useSidebar } from "@/components/ui/sid
 import { AppSidebar } from "@/components/AppSidebar";
 import { Bell, Plus, ShoppingCart, TrendingUp, Users, Info, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CreatePostDialog } from "@/components/CreatePostDialog";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { currentUser } from "@/lib/userData";
@@ -33,6 +33,7 @@ function LayoutContent({
   const { setOpen, isMobile } = useSidebar();
   const location = useLocation();
   const isMessagesPage = location.pathname === "/messages";
+  const prevPathRef = useRef(location.pathname);
 
   // Define paths that should NOT have the sidebar layout
   const noLayoutPaths = ["/", "/404"];
@@ -40,13 +41,17 @@ function LayoutContent({
 
   // Handle sidebar collapse on Messages page and restoration when leaving
   useEffect(() => {
+    const wasMessagesPage = prevPathRef.current === "/messages";
+    
     if (isMessagesPage && !isMobile) {
       setOpen(false);
-    } else if (!isMessagesPage && !isMobile && !isNoLayoutPage) {
-      // Restore sidebar only once when leaving the Messages page
+    } else if (wasMessagesPage && !isMessagesPage && !isMobile && !isNoLayoutPage) {
+      // Restore sidebar only when navigating AWAY from the Messages page
       setOpen(true);
     }
-  }, [isMessagesPage, isMobile, setOpen, isNoLayoutPage]);
+    
+    prevPathRef.current = location.pathname;
+  }, [location.pathname, isMobile, isNoLayoutPage, setOpen]);
 
   // Don't render the layout on the landing page or 404 page
   // Also check if the path matches any known route to handle random 404s

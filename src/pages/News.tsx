@@ -235,7 +235,7 @@ export default function News() {
                   className="group cursor-pointer space-y-5"
                   onClick={() => handleArticleClick(article)}
                 >
-                  <div className="aspect-[3/2] overflow-hidden rounded-sm border border-border/30 grayscale hover:grayscale-0 transition-all duration-500">
+                  <div className="aspect-[3/2] overflow-hidden rounded-sm border border-border/30 transition-all duration-500">
                     <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="space-y-3">
