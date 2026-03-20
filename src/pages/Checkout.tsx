@@ -85,12 +85,12 @@ export default function Checkout() {
                 </div>
                 <div className="space-y-2">
                   <Label className="text-[10px] font-black uppercase">Address</Label>
-                  <Input placeholder="123 Farm Road, Kumasi" className="bg-surface/50 border-border/30 h-12 rounded-xl" required />
+                  <Input placeholder="123 Farm Road, Accra" className="bg-surface/50 border-border/30 h-12 rounded-xl" required />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="space-y-2 md:col-span-2">
                     <Label className="text-[10px] font-black uppercase">City</Label>
-                    <Input placeholder="Kumasi" className="bg-surface/50 border-border/30 h-12 rounded-xl" required />
+                    <Input placeholder="Accra" className="bg-surface/50 border-border/30 h-12 rounded-xl" required />
                   </div>
                   <div className="space-y-2">
                     <Label className="text-[10px] font-black uppercase">Postal Code</Label>

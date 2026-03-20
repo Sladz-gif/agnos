@@ -160,7 +160,7 @@ export const marketListings: Product[] = [
     category: "Vegetables",
     seller: { name: "Green Fields", rating: 4.9, avatar: "GF" },
     inStock: true,
-    specifications: { "Weight": "1kg", "Origin": "Kumasi", "Type": "Organic" },
+    specifications: { "Weight": "1kg", "Origin": "Accra", "Type": "Organic" },
     reviews_list: [
       { id: 1, user: "Kofi Mensah", avatar: "KM", rating: 5, comment: "The best tomatoes I've bought this year! So juicy and fresh.", date: "2 days ago" },
       { id: 2, user: "Ama Serwaa", avatar: "AS", rating: 4, comment: "Very good quality, though a bit expensive.", date: "1 week ago" }
@@ -448,7 +448,7 @@ export const courses: Course[] = [
 
 export const dashboardInsights = [
   "Inventory turnover increased by 12% this week",
-  "Tomato prices rising in Kumasi region (+8%)",
+  "Tomato prices rising in Accra region (+8%)",
   "Maize Plot A harvest schedule optimized",
   "Consider increasing logistical support for Plot B",
 ];
@@ -498,7 +498,7 @@ export const notifications: Notification[] = [
   {
     id: "n2",
     title: "Market Price Alert",
-    message: "Maize prices in Kumasi have increased by 8% today. Check the marketplace for updates.",
+    message: "Maize prices in Accra have increased by 8% today. Check the marketplace for updates.",
     time: "2h ago",
     type: "market",
     read: false,

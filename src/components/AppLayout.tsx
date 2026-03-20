@@ -34,18 +34,32 @@ function LayoutContent({
   const location = useLocation();
   const isMessagesPage = location.pathname === "/messages";
 
+  // Define paths that should NOT have the sidebar layout
+  const noLayoutPaths = ["/", "/404"];
+  const isNoLayoutPage = noLayoutPaths.includes(location.pathname);
+
   // Handle sidebar collapse on Messages page and restoration when leaving
   useEffect(() => {
     if (isMessagesPage && !isMobile) {
       setOpen(false);
-    } else if (!isMessagesPage && !isMobile) {
+    } else if (!isMessagesPage && !isMobile && !isNoLayoutPage) {
       // Restore sidebar only once when leaving the Messages page
       setOpen(true);
     }
-  }, [isMessagesPage, isMobile, setOpen]); // Added setOpen to dependencies
+  }, [isMessagesPage, isMobile, setOpen, isNoLayoutPage]);
 
-  // Don't render the layout on the landing page
-  if (location.pathname === "/") {
+  // Don't render the layout on the landing page or 404 page
+  // Also check if the path matches any known route to handle random 404s
+  const platformPaths = [
+    "/dashboard", "/feed", "/channels", "/marketplace", 
+    "/market-analysis", "/seller-verification", "/checkout", 
+    "/news", "/lessons", "/farm", "/kiwi", "/profile", 
+    "/messages", "/notifications"
+  ];
+  
+  const isPlatformPage = platformPaths.some(path => location.pathname.startsWith(path));
+
+  if (isNoLayoutPage || !isPlatformPage) {
     return <>{children}</>;
   }
 

@@ -14,7 +14,7 @@ interface Message {
 }
 
 const mockResponses = [
-  "Based on your current data, I recommend optimizing your distribution routes to Kumasi for a 15% reduction in transport costs.",
+  "Based on your current data, I recommend optimizing your distribution routes to Accra for a 15% reduction in transport costs.",
   "Your maize in Plot A is ready for the next phase of the logistics cycle. Market demand is high this week.",
   "I've analyzed the market trends: tomato prices are expected to peak next week. Consider your transport availability for maximum revenue.",
   "Your layer flock's 12% production increase correlates with the new inventory management system. I recommend maintaining the current logistical regimen.",

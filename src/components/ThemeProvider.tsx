@@ -20,11 +20,11 @@ export const themes: ThemeInfo[] = [
 const ThemeContext = createContext<{
   theme: ThemeName;
   setTheme: (t: ThemeName) => void;
-}>({ theme: "midnight", setTheme: () => {} });
+}>({ theme: "frost", setTheme: () => {} });
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<ThemeName>(() => {
-    return (localStorage.getItem("agnos-theme") as ThemeName) || "midnight";
+    return (localStorage.getItem("agnos-theme") as ThemeName) || "frost";
   });
 
   useEffect(() => {
